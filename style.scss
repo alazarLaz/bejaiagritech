@@ -5,13 +5,15 @@
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
-	max-width: 100%;
 }
 body {
 	font-family: Poppinsw, sans-serif;
 	display: flex;
 	flex-direction: column;
-	max-width: 120vw;
+	max-width: 100%;
+}
+.wrapper {
+	max-width: 100vw;
 }
 // Onclick Overlay
 .overlay {
@@ -85,7 +87,7 @@ body {
 .home {
 	position: relative;
 	min-height: 90vh;
-	width: 100%;
+	max-width: 100%;
 	background-image: url("./images/bg1.jpg");
 	background-attachment: fixed;
 
@@ -187,15 +189,24 @@ body {
 }
 //Gallery
 .gallery {
+	max-width: 100%;
+	min-height: 50vh;
+	background-color: #3a322b;
 	display: flex;
 	flex-direction: column;
-	margin: 10% 20%;
 	align-items: center;
 	justify-content: center;
+	font-size: 1.5rem;
 	.header {
+		margin: 10% 20%;
 		display: flex;
+		flex-direction: column;
 		.text {
+			color: white;
 			flex: 2;
+			h1 {
+				font-size: 3rem;
+			}
 		}
 		.button {
 			position: relative;
@@ -217,8 +228,9 @@ body {
 		}
 	}
 	.maingallery {
+		margin: 10% 20%;
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 0.5fr 0.5fr;
 		grid-row-start: 1;
 		grid-row-end: 5;
 
@@ -250,62 +262,109 @@ body {
 			background: url("./images/image6.jpg");
 		}
 		.image7 {
-			background: url("./images/image7.jpg");
+			background: url("./images/image7.jpeg");
 		}
 		.image8 {
-			background: url("./images/image8.jpg");
+			background: url("./images/image8.jpeg");
 		}
 		.image9 {
-			background: url("./images/image9.jpg");
+			background: url("./images/image9.jpeg");
 		}
-		.image9 {
-			background: url("./images/image1.jpg");
+		.image10 {
+			background: url("./images/image10.jpeg");
 		}
 	}
 }
 .process {
-	height: 50vh;
+	min-height: 10vh;
 	margin: 10% 20%;
-	position: relative;
-	.problems {
-		position: absolute;
-		left: 10px;
-		top: 10px;
-	}
-	.steps {
-		position: absolute;
-		top: 50%;
-		span {
-			padding: 50px 25px;
-			background-color: red;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
+	justify-content: center;
+	> * {
+		box-shadow: 0px 30px 40px -20px hsl(229, 6%, 66%);
+		padding: 30px;
+		margin: 20px;
+		border: black solid 1px;
+		h1 {
+			font-size: 2rem;
 		}
-	}
-	.solutions {
-		position: absolute;
-		right: 10px;
-		bottom: 10px;
 	}
 }
 .customer {
 }
 .footer {
+	font-size: 1.1rem;
 	position: relative;
-	min-height: 50vh;
-	background-color: black;
+	min-height: 60vh;
+	// background-color: black;
+	background-color: #d7c1ad;
+	display: flex;
+	flex-direction: column;
+	.fsthalf {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		.lists {
+			margin: 20px;
+			display: flex;
+			h3 {
+				font-size: 1.5rem;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+			> * {
+				margin: 20px;
+			}
+		}
+	}
+	.sndhalf {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		> * {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			> * {
+				margin: 10px;
+			}
+			button {
+				right: 0px;
+				font-size: 1.5rem;
+				min-width: 10rem;
+				min-height: 4rem;
+				background-color: orange;
+				color: white;
+				border: white solid 1px;
+			}
+			button:hover {
+				background-color: white;
+				color: orange;
+			}
+		}
+	}
 	.smallfooter {
 		position: absolute;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: space-around;
 		bottom: 0;
 		width: 100%;
 		height: 5vh;
 		color: grey;
-		// background-color: grey;
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 968px) {
 	.navbar ul {
 		flex-direction: row;
 	}
@@ -315,6 +374,35 @@ body {
 	.products {
 		.prdct_ctgry {
 			flex-direction: row;
+		}
+	}
+	.gallery {
+		.maingallery {
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		}
+		.header {
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			.button {
+				margin: 20px auto;
+			}
+		}
+	}
+	.process {
+		flex-direction: row;
+	}
+	.footer {
+		flex-direction: row;
+		.fsthalf {
+			.lists {
+				ul {
+					li:hover {
+						color: grey;
+						cursor: pointer;
+					}
+				}
+			}
 		}
 	}
 }
