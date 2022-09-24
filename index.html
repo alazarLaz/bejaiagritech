@@ -5,24 +5,190 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bejai Agritech</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+			integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="reset.css" />
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<!-- Navbar -->
-		<nav class="navbar"></nav>
+		<!-- <div class="overlay">
+			<ul>
+			    <div class="logo"></div>
+				<li>Home</li>
+				<li>Company</li>
+				<li>Product</li>
+				<li>Production</li>
+				<li>Customers</li>
+				<li>Gallery</li>
+				<li>Contact Us</li> 
+			</ul>
+		</div> -->
+		<div id="myNav" class="overlay">
+			<div class="collapse">
+				<i class="fa fa-window-close" onclick="closeNav()"></i>
+			</div>
+			<div class="overlay-content">
+				<a href="#home" onclick="closeNav()">Home</a>
+				<a href="#company" onclick="closeNav()">Company</a>
+				<a href="#products" onclick="closeNav()">Product</a>
+				<a href="#gallery" onclick="closeNav()">Production</a>
+				<a href="#process" onclick="closeNav()">Customers</a>
+				<a href="#customer" onclick="closeNav()">Gallery</a>
+				<a href="#footer" onclick="closeNav()">Contact</a>
+			</div>
+		</div>
+		<nav class="navbar">
+			<!-- <div class="logo"></div> -->
+			<div class="collapse">
+				<i onclick="openNav()" class="fa-solid fa-bars"></i>
+			</div>
+		</nav>
 		<!-- Home -->
-		<section class="home"></section>
+		<section class="home" id="home">
+			<div class="half1">
+				<h1>Bejai Agritech</h1>
+				<h2>Healthy Mushroom in time. Everytime.</h2>
+				<h3>Pioneers in Special Mushroom Cultivation</h3>
+			</div>
+			<div class="half2">
+				<h1>በጄ አግሪቴክ</h1>
+				<h2>ጤናማ እንጉዳይ በጊዜ. ሁል ጊዜ.</h2>
+				<h3>በልዩ የእንጉዳይ እርባታ</h3>
+			</div>
+		</section>
 		<!-- Company -->
-		<section class="company"></section>
+		<section class="company" id="company">
+			<div class="slider"></div>
+			<div class="visionStatment">
+				<h1>BEJAI</h1>
+				<h1>AGRITECH</h1>
+				<h3>ሰላም / مرحبا / Bonjour / Hello</h3>
+				<p>
+					Our vision is to be a major mushroom supplier in Africa. To achieve
+					our set vision, we intend to practice sustainable farming process by
+					growing our edible mushroom in a controlled environment with the help
+					of technology and using organic substrates as much as we can
+				</p>
+			</div>
+		</section>
 		<!-- Products -->
-		<section class="products"></section>
+		<section class="products" id="products">
+			<h1>We sell our products in 3 forms</h1>
+			<div class="prdct_ctgry">
+				<div class="Fresh">
+					<div class="img"></div>
+					<p class="description">Fresh</p>
+				</div>
+				<div class="Dried">
+					<div class="img"></div>
+					<p class="description">Dried</p>
+				</div>
+				<div class="Canned">
+					<div class="img"></div>
+					<p class="description">Canned</p>
+				</div>
+			</div>
+		</section>
 		<!-- Gallery -->
-		<section class="gallery"></section>
+		<section class="gallery" id="gallery">
+			<div class="header">
+				<div class="text">
+					<h1>Get Inspired</h1>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+						rerum sequi fugiat mollitia. Unde, porro ea. Praesentium,
+						exercitationem dignissimos sunt et temporibus libero aperiam,
+						quaerat asperiores, odio culpa optio error! Possimus nobis hic ipsa
+						quaerat quo, excepturi blanditiis vitae eaque odit ut accusamus
+						nihil veniam. Aut nisi laborum magnam? Alias consequatur aperiam,
+						optio deleniti commodi cumque accusantium nesciunt quibusdam minima.
+					</p>
+				</div>
+				<div class="button">
+					<button>Explore Recipe</button>
+				</div>
+			</div>
+			<div class="maingallery">
+				<div class="image1"></div>
+				<div class="image2"></div>
+				<div class="image3"></div>
+				<div class="image4"></div>
+				<div class="image5"></div>
+				<div class="image6"></div>
+				<div class="image7"></div>
+				<div class="image8"></div>
+				<div class="image9"></div>
+			</div>
+		</section>
 		<!-- Process -->
-		<section class="process"></section>
+		<section class="process" id="process">
+			<div class="problems">
+				<ul>
+					<li>Shelf Life</li>
+					<li>Traditional Cultivation Process</li>
+					<li>Not available in state capitals</li>
+					<li>No reliable source</li>
+				</ul>
+			</div>
+			<div class="steps">
+				<span>Prepare raw material input</span>
+				<span>Cultivate</span>
+				<span>Harvest and Store</span>
+				<span>Pack</span>
+				<span>Deliver</span>
+			</div>
+			<div class="solutions">
+				<ul>
+					<li>Better Cultivation Process</li>
+					<li>Increase Shelf life</li>
+					<li>Larger inventory</li>
+				</ul>
+			</div>
+		</section>
 		<!-- Customers -->
-		<section class="customer"></section>
+		<section class="customer" id="customer"></section>
 		<!-- Footer -->
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<div class="1sthalf">
+				<h1>Pioneers in Exotic Mushroom</h1>
+				<div class="lists">
+					<ul>
+						<h3>Learn</h3>
+						<li></li>
+					</ul>
+					<ul>
+						<h3>Buy</h3>
+						<li></li>
+					</ul>
+					<ul>
+						<h3>About Us</h3>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="2ndhalf">
+				<h1>“No longer wild, but far from tame”</h1>
+			</div>
+			<div class="smallfooter">
+				<h3>© Bejai Agritech, Inc. All Rights Reserved</h3>
+				<h3></h3>
+			</div>
+		</footer>
+
+		<script>
+			function openNav() {
+				document.getElementById("myNav").style.height = "100%";
+			}
+
+			/* Close */
+			function closeNav() {
+				document.getElementById("myNav").style.height = "0%";
+			}
+		</script>
 	</body>
 </html>

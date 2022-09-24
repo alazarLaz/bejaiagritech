@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  list-style: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  max-width: 100%;
+}
+
+body {
+  font-family: Poppinsw, sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 120vw;
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  color: white;
+  transition: 0.5s;
+}
+.overlay .collapse {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: white;
+}
+.overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.overlay .overlay-content a {
+  color: white;
+  font-size: 3rem;
+}
+.overlay .overlay-content a:hover {
+  color: wheat;
+}
+
+.navbar {
+  min-height: 10vh;
+  opacity: 0.5;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  background-color: transpart;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar .logo {
+  background: url("./images/logo3.jpg");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+}
+.navbar .collapse {
+  padding-right: 1rem;
+  font-size: 3rem;
+  display: block;
+}
+
+/* Home */
+.home {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  background-image: url("./images/bg1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  flex-direction: column;
+}
+.home * {
+  font-weight: 900;
+  width: 50%;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.home * h1 {
+  color: beige;
+  font-size: 4rem;
+}
+.home * h2 {
+  color: black;
+  font-size: 2rem;
+}
+.home * h3 {
+  color: black;
+  font-size: 2rem;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  background-color: wheat;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.6;
+}
+
+.company {
+  margin: 50px 20px;
+  min-height: 30vh;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+.company .visionStatment {
+  width: 50%;
+  text-align: center;
+}
+.company .visionStatment h1 {
+  font-size: 7.9vw;
+}
+.products {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.products .prdct_ctgry {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.products .prdct_ctgry * {
+  margin: 20px 50px;
+}
+.products .prdct_ctgry * .img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+.products .prdct_ctgry .Fresh .img {
+  background-image: url("./images/fresh.jpg");
+}
+.products .prdct_ctgry .Dried .img {
+  background-image: url("./images/dried.jpg");
+}
+.products .prdct_ctgry .Canned .img {
+  background-image: url("./images/canned.jpg");
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 20%;
+  align-items: center;
+  justify-content: center;
+}
+.gallery .header {
+  display: flex;
+}
+.gallery .header .text {
+  flex: 2;
+}
+.gallery .header .button {
+  position: relative;
+  flex: 1;
+}
+.gallery .header .button button {
+  position: absolute;
+  right: 0px;
+  font-size: 1.5rem;
+  width: 10rem;
+  height: 4rem;
+  background-color: brown;
+  color: white;
+  border: white solid 1px;
+}
+.gallery .header .button button:hover {
+  background-color: white;
+  color: brown;
+}
+.gallery .maingallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  flex-wrap: nowrap;
+}
+.gallery .maingallery * {
+  margin: 10px 10px;
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .maingallery .image1 {
+  background: url("./images/image1.jpg");
+}
+.gallery .maingallery .image2 {
+  background: url("./images/image2.jpg");
+}
+.gallery .maingallery .image3 {
+  background: url("./images/image3.jpg");
+}
+.gallery .maingallery .image4 {
+  background: url("./images/image4.jpg");
+}
+.gallery .maingallery .image5 {
+  background: url("./images/image5.jpg");
+}
+.gallery .maingallery .image6 {
+  background: url("./images/image6.jpg");
+}
+.gallery .maingallery .image7 {
+  background: url("./images/image7.jpg");
+}
+.gallery .maingallery .image8 {
+  background: url("./images/image8.jpg");
+}
+.gallery .maingallery .image9 {
+  background: url("./images/image9.jpg");
+}
+.gallery .maingallery .image9 {
+  background: url("./images/image1.jpg");
+}
+
+.process {
+  height: 50vh;
+  margin: 10% 20%;
+  position: relative;
+}
+.process .problems {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.process .steps {
+  position: absolute;
+  top: 50%;
+}
+.process .steps span {
+  padding: 50px 25px;
+  background-color: red;
+}
+.process .solutions {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.footer {
+  position: relative;
+  min-height: 50vh;
+  background-color: black;
+}
+.footer .smallfooter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  color: grey;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar ul {
+    flex-direction: row;
+  }
+  .home {
+    flex-direction: row;
+  }
+  .products .prdct_ctgry {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */
